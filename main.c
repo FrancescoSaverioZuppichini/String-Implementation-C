@@ -13,7 +13,7 @@
 
 int main(int argc, const char * argv[]) {
     my_string * my_new_string;
-    char * string1 = "ciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene test test";
+    char * string1 = "ciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene test testciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene tciao come stai tutto bene test tes stai tutto bene test tes stai tutto bene test tes stai tutto bene t";
     int i;
     
     my_new_string = my_string_init();
@@ -23,10 +23,10 @@ int main(int argc, const char * argv[]) {
     }
     
     printf("%s\n",get_my_string(my_new_string));
-    printf("size: %i\n",my_string_get_size(my_new_string));
+    printf("size: %zu\n",my_string_get_size(my_new_string));
     printf("strlen: %lu\n",strlen(get_my_string(my_new_string)));
 
-    printf("cap %i\n",my_string_get_cap(my_new_string));
+    printf("cap %zu\n",my_string_get_cap(my_new_string));
 
     my_string_destroy(my_new_string);
     return 0;

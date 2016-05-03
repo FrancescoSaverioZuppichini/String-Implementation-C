@@ -41,10 +41,10 @@ void  my_string_destroy(my_string * this){
     free(this);
 }
 
-int   my_string_get_size(my_string * this){
+size_t   my_string_get_size(my_string * this){
     return this->size;
 }
 
-int   my_string_get_cap(my_string * this){
+size_t   my_string_get_cap(my_string * this){
     return this->cap;
 }

@@ -17,8 +17,8 @@
 #define get_my_string(my_string)(my_string->string)
 
 typedef struct my_string_struct{
-    int cap;
-    int size;
+    size_t cap;
+    size_t size;
     char *string;
 }my_string;
 
@@ -26,7 +26,7 @@ my_string * my_string_init();
 char *  my_string_add(my_string *,char);
 void  my_string_destroy(my_string *);
 void  my_string_erase(my_string *);
-int   my_string_get_size(my_string *);
-int   my_string_get_cap(my_string *);
+size_t   my_string_get_size(my_string *);
+size_t   my_string_get_cap(my_string *);
 
 #endif /* my_string_h */
