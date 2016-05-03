@@ -1,0 +1,4 @@
+language: c
+install: true
+compiler: gcc
+script: gcc main.c my_string.c -o my_string.c
