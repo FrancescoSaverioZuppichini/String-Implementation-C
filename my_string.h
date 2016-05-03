@@ -25,6 +25,8 @@ typedef struct my_string_struct{
 my_string * my_string_init();
 void  my_string_add(my_string *,char);
 void  my_string_destroy(my_string *);
+void  my_string_erase(my_string *);
 int   my_string_get_size(my_string *);
 int   my_string_get_cap(my_string *);
+
 #endif /* my_string_h */

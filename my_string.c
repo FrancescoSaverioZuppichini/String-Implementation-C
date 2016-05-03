@@ -28,6 +28,9 @@ void  my_string_add(my_string * this,char el){
     this->size++;
 }
 
+void my_string_erase(my_string *this){
+    this->size = 0;
+}
 
 void  my_string_destroy(my_string * this){
     free(this->string);
