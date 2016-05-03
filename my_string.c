@@ -15,17 +15,21 @@ my_string * my_string_init(){
     my_new_string->cap = MIN_CAP;
     my_new_string->size = 0;
     my_new_string->string = malloc(sizeof(my_new_string->cap));
-    
+    if(!my_new_string->string)
+        return NULL;
     return my_new_string;
 }
 
-void  my_string_add(my_string * this,char el){
+char *  my_string_add(my_string * this,char el){
     if(this->size == this->cap){
         this->cap *= 2;
         this->string = realloc(this->string,this->cap);
+        if(!this->string)
+            return NULL;
     }
     this->string[this->size] = el;
     this->size++;
+    return this->string;
 }
 
 void my_string_erase(my_string *this){
