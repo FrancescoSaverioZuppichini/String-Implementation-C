@@ -7,11 +7,12 @@
 //
 
 #include "my_string.h"
-
 my_string * my_string_init(){
     my_string * my_new_string;
     
     my_new_string = malloc(sizeof(my_string));
+    if(!my_new_string)
+        return NULL;
     my_new_string->cap = MIN_CAP;
     my_new_string->size = 0;
     my_new_string->string = malloc(sizeof(my_new_string->cap));
@@ -30,6 +31,21 @@ char *  my_string_add(my_string * this,char el){
     this->string[this->size] = el;
     this->size++;
     return this->string;
+}
+
+char * my_string_copy_str(my_string * this, char * src){
+    size_t new_size;
+    int i;
+    new_size = strlen(src) + 1;
+    
+    my_string_erase(this);
+    
+    for(i = 0; i < new_size; i++){
+        my_string_add(this, *src + i);
+    }
+   
+    return this->string;
+
 }
 
 void my_string_erase(my_string *this){
