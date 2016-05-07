@@ -20,11 +20,14 @@
 typedef struct my_string_struct{
     size_t cap;
     size_t size;
+    size_t inner_size;
     char *string;
 }my_string;
 
 my_string * my_string_init();
 char *  my_string_add(my_string *,char);
+char *  my_string_add_str(my_string *,char*);
+
 char * my_string_copy_str(my_string * , char * );
 
 void  my_string_destroy(my_string *);
