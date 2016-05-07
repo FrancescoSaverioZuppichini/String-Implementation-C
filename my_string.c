@@ -41,7 +41,7 @@ char * my_string_copy_str(my_string * this, char * src){
     my_string_erase(this);
     
     for(i = 0; i < new_size; i++){
-        my_string_add(this, *src + i);
+        my_string_add(this, src[i]);
     }
    
     return this->string;
