@@ -26,19 +26,18 @@ my_string * my_string_init(){
 char *  my_string_add(my_string * this,char el){
     if(el == '\0')
         return this->string;
-    if(this->inner_size == this->cap){
+    if(this->inner_size == this->cap - 1){
         this->cap *= 2;
         this->string = realloc(this->string,this->cap);
         if(!this->string)
             return NULL;
     }
     this->string[this->size] = el;
-    if(this->size == this->inner_size)
+    if(this->size == this->inner_size )
         this->inner_size++;
     this->size++;
-    if(el != '\0'){
-        this->string[this->size] = '\0';
-    }
+    this->string[this->size] = '\0';
+    
     return this->string;
 }
 

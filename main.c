@@ -13,11 +13,12 @@
 
 int main(int argc, const char * argv[]) {
     my_string * my_new_string;
-    char * string1 = "Lorem ipsum dolor sit amet, consectetur ...";
+    char * string1 = "Lorem ipsum dolor sit amet, consectetur ..Lorem ipsum dolor sit amet, consectetur ..Lorem ipsum dolor sit amet, consectetur ..Lorem ipsum dolor sit amet, consectetur ..Lorem ipsum dolor sit amet, consectetur ..Lorem ipsum dolor sit amet, consectetur ...";
     int i;
     
     my_new_string = my_string_init();
     my_string_add(my_new_string, 'a');
+    my_string_add(my_new_string, 'b');
     my_string_add(my_new_string, 'b');
     my_string_add(my_new_string, '\0');
     printf("%s\n",get_my_string(my_new_string));
