@@ -19,15 +19,14 @@ All the API method are defined in *my_string.h*
 ```
 my_string_add(<your_my_string>,'a');
 ```
-This will add 'a' to your String, remember to always add the string delimiter in the end ('\0')
-
+This will add 'a' to your String, my_string automatically add the delimiter '\0'.
 ####Copy a string to my_string:
 
 ```
-char * string1 = "Hey i'm a normal string";
-my_string_copy_str(<your_my_string>, string1);
+ my_string_copy_str(<your_my_string>, "test test!!");
 
 ```
+
 
 ####Reset a my_string:
 You can reset a my_string in order to be overritten:
@@ -38,79 +37,21 @@ char * string1 = "Hey i'm a normal string";
 my_string_copy_str(<your_my_string>, string1);
 
 ```
-The actual string is *<your_my_string>* will be *"Hey i'm a normal string"*. But what if know we want to use the same *my_string* and just add two characters? We can reset the
-
-#####Front pop
-```
- sll_pop_front(<your_sll>);
+The string *<your_my_string>* will be *"Hey i'm a normal string"*. But what if know we want to use the same *my_string* and just add two characters? We can reset by executing
 
 ```
-#####Back pop
-```
-sll_pop_back(<your_sll>)
-```
-Every pop method returns the node popped
-
-
-####Remove an element
+my_string_erase(<your_my_string>);
+my_string_add(<your_my_string>,'a');
+my_string_add(<your_my_string>,'a');
 
 ```
-sll_remove(<your_sll>,&<your_key>)
-```
+Now *<your_my_string>* will hold "aa"
 
-It returns the element removed
-
-####Get an element:
+###Destroy a my_string
 
 ```
-sll_get(<your_sll>,&<your_key>);
-```
-It returns the getted element
+my_string_destroy(<your_my_string>);
 
-####Destroy the list
-```
-sll_destroy(<your_sll>);
-```
-####Mapping the list
-You can perfom an *action* function on every evelement by calling:
-
-```
-sll_map(<your_list>,&<your_function>);
-
-```
-
-The signature of the function must be 
-
-```
-void <your_action_function>(void *)
-```
-
-Example:
-Assume you have a SLL of integer an you want to double every element, create a function:
-
-```
-void double_data(void *node){
-    *get_data(node,int) *=2;
-}
-
-```
-And call the map method:
-
-```
-sll_print(<your_int_sll>, &my_print);
-```
-####Get data from a node
-The macro *get_data*  returns the casted pointer to the data of a given node
-
-```
-get_data(<node>,<type>)
-```
-
-Example:
-Assume we have a node with a *int* data, we can print it like that:
-
-```
-printf("%i\n",*get_data(node,int));
 ```
 
 ####Example file
