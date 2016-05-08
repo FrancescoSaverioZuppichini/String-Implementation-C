@@ -25,8 +25,8 @@ typedef struct my_string_struct{
 }my_string;
 
 my_string * my_string_init();
-char *  my_string_add(my_string *,char);
-char *  my_string_add_str(my_string *,char*);
+char *  my_string_add(my_string *,const char);
+char *  my_string_add_str(my_string *, const char*);
 
 char * my_string_copy_str(my_string * , char * );
 

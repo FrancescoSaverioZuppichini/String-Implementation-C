@@ -23,7 +23,7 @@ my_string * my_string_init(){
     return my_new_string;
 }
 
-char *  my_string_add(my_string * this,char el){
+char *  my_string_add(my_string * this,const char el){
 
     if(this->inner_size == this->cap - 1){
         this->cap *= 2;
@@ -41,7 +41,7 @@ char *  my_string_add(my_string * this,char el){
     return this->string;
 }
 
-char *  my_string_add_str(my_string *this,char* src){
+char *  my_string_add_str(my_string *this,const char* src){
     int i;
     if(this->inner_size == 0)
         return NULL;
@@ -56,6 +56,16 @@ char *  my_string_add_str(my_string *this,char* src){
 char * my_string_copy_str(my_string * this, char * src){
     size_t new_size;
     int i;
+    unsigned long len;
+    
+    if(src == NULL)
+        return NULL;
+    
+    len = strlen(src);
+    
+    if(len == 0)
+        return NULL;
+        
     new_size = strlen(src) + 1;
     
     my_string_erase(this);
