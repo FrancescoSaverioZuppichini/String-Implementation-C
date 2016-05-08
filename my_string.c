@@ -53,7 +53,7 @@ char *  my_string_add_str(my_string *this,const char* src){
 }
 
 
-char * my_string_copy_str(my_string * this, char * src){
+char * my_string_copy_str(my_string * this,const char * src){
     size_t new_size;
     int i;
     unsigned long len;
