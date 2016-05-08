@@ -20,15 +20,22 @@ All the API method are defined in *my_string.h*
 my_string_add(<your_my_string>,'a');
 ```
 This will add 'a' to your String, my_string automatically add the delimiter '\0'.
-####Copy a string to my_string:
+#####Add a string to my_string
+```
+my_string_add_str(<your_my_string>,"hi!");
+```
+This will add "hi" to your String
+#####Copy a string to my_string:
 
 ```
- my_string_copy_str(<your_my_string>, "test test!!");
+ my_string_copy_str(<your_my_string>, "test!!");
 
 ```
 
+This will remove and add *"test!!"* in *your\_my\_string>*
 
-####Reset a my_string:
+
+#####Reset a my_string:
 You can reset a my_string in order to be overritten:
 After the execution of this code
 
@@ -45,7 +52,7 @@ my_string_add(<your_my_string>,'a');
 my_string_add(<your_my_string>,'a');
 
 ```
-Now *<your_my_string>* will hold "aa"
+Now *your\_my\_string* will hold "aa"
 
 ###Destroy a my_string
 
