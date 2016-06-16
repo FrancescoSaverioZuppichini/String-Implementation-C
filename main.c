@@ -15,6 +15,7 @@ int main(int argc, const char * argv[]) {
     my_string * my_new_string;
     char * string1 = "Lorem ipsum dolor sit amet, consectetur ..Lorem ipsum dolor sit amet, consectetur ..Lorem ipsum dolor sit amet, consectetur ..Lorem ipsum dolor sit amet, consectetur ..Lorem ipsum dolor sit amet, consectetur ..Lorem ipsum dolor sit amet, consectetur ...";
     int i;
+    char c;
     
     my_new_string = my_string_init();
     my_string_add(my_new_string, 'a');
@@ -55,8 +56,15 @@ int main(int argc, const char * argv[]) {
     printf("strlen: %lu\n",strlen(get_my_string(my_new_string)));
 
     printf("cap %zu\n",my_string_get_cap(my_new_string));
+    my_string_erase(my_new_string);
+//    std test
+    while((c = getchar()) != EOF){
+        my_string_add(my_new_string,c);
+    }
     
+    printf("%s\n",get_my_string(my_new_string));
 
     my_string_destroy(my_new_string);
+    
     return 0;
 }
